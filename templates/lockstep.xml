@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Lockstep</Name>
+  <Repository>ghcr.io/smiei/lockstep:latest</Repository>
+  <Registry>https://github.com/smiei/lockstep/pkgs/container/lockstep</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Icon>https://raw.githubusercontent.com/smiei/unraid-templates/main/lockstep.png</Icon>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <Overview>Lockstep is a self-hosted tracker for Pokémon Nuzlocke runs, built around SoulLink: 2-4 players or solo. Log every catch route by route; a link forms once every player has caught, and one death takes the whole link to the Memorial. Level caps, a battle scout against each player's team, Species and Shiny Clause variants, and the type chart, stats, catch rates and move names of the generation you play. Gen 1-5, many ROM hacks (Radical Red, Unbound, Renegade Platinum, ...) and Pokémon Infinite Fusion with fusions. Live on every device at the table, installable as an app, in five languages. No account, no cloud. Pokémon sprites, badges and trainer pictures are downloaded on the first start, never shipped in the image. Unofficial, non-commercial fan project.</Overview>
+  <Support>https://github.com/smiei/lockstep/issues</Support>
+  <Project>https://github.com/smiei/lockstep</Project>
+  <TemplateURL>https://raw.githubusercontent.com/smiei/unraid-templates/main/templates/lockstep.xml</TemplateURL>
+  <Category>Tools:Utilities</Category>
+  <ExtraSearchTerms>nuzlocke soullink pokemon tracker infinite fusion romhack</ExtraSearchTerms>
+  <Requires>Internet access on the first start: it downloads the Pokémon sprites, badges and trainer pictures (a few minutes). Installing the app on a phone needs HTTPS, for example through a reverse proxy.</Requires>
+  <Changes>
+### 5.0
+- Renamed to Lockstep; image on GitHub's registry (ghcr.io/smiei/lockstep)
+- 16 ROM hacks, Pokémon up to Gen 9 with regional forms
+- Import your own game packs; a start page with every run as a card
+- Boss-trainer pictures download by themselves
+Full notes: https://github.com/smiei/lockstep/releases
+  </Changes>
+  <Date>2026-10-31</Date>
+  <License>MIT</License>
+
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Port of the web interface." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Database" Target="/app/db" Default="/mnt/user/appdata/lockstep" Mode="rw" Description="Your runs (SQLite database) and imported game packs. Back this folder up." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/lockstep</Config>
+  <Config Name="Pokémon sprites" Target="/app/public/pokemon-sprites" Default="/mnt/user/appdata/lockstep/pokemon-sprites" Mode="rw" Description="Downloaded once and kept across updates. Without it, every image update downloads them again (a few minutes)." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/lockstep/pokemon-sprites</Config>
+  <Config Name="Trainer pictures" Target="/app/public/trainers" Default="/mnt/user/appdata/lockstep/trainers" Mode="rw" Description="Boss-trainer pictures, downloaded once and kept across updates. Your own pictures go here too and are never overwritten." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/lockstep/trainers</Config>
+  <Config Name="Default colour" Target="DEFAULT_SHELL_COLOR" Default="green|red|blue|yellow" Description="The colour every device starts with, icons included. Each device can still pick its own in the gear menu." Type="Variable" Display="always" Required="false" Mask="false">green</Config>
+  <Config Name="Default language" Target="DEFAULT_LANGUAGE" Default="" Description="The language a browser tab starts in: de, en, fr, es or it. Empty: each browser's own language. A language picked in the gear menu always wins." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Trainer picture download" Target="TRAINER_SPRITES" Default="on|off" Description="off skips downloading the boss-trainer pictures from Pokémon Showdown." Type="Variable" Display="advanced" Required="false" Mask="false">on</Config>
+  <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="file:/app/db/nuzlocke.db" Description="Where the database lives inside the container. Leave as is." Type="Variable" Display="advanced" Required="true" Mask="false">file:/app/db/nuzlocke.db</Config>
+</Container>

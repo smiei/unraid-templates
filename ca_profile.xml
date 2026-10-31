@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<CommunityApplications>
+  <Profile>
+Unraid templates by smiei.
+
+**Lockstep** - a self-hosted SoulLink and Nuzlocke tracker for Pokémon runs: 2-4 players or solo, Gen 1-5, many ROM hacks and Pokémon Infinite Fusion.
+
+Support and bug reports: GitHub issues of the app, https://github.com/smiei/lockstep/issues
+  </Profile>
+  <Icon>https://raw.githubusercontent.com/smiei/unraid-templates/main/lockstep.png</Icon>
+  <WebPage>https://github.com/smiei/unraid-templates</WebPage>
+</CommunityApplications>
