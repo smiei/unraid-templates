@@ -16,6 +16,10 @@
   <ExtraSearchTerms>nuzlocke soullink pokemon tracker infinite fusion romhack</ExtraSearchTerms>
   <Requires>Internet access on the first start: it downloads the Pokémon sprites, badges and trainer pictures (a few minutes). Installing the app on a phone needs HTTPS, for example through a reverse proxy.</Requires>
   <Changes>
+### 5.1
+- Encounter tab: frames and badges show each route's outcome at a glance
+- 66 more boss-trainer pictures for the ROM hacks
+- ROM-hack forms show their species' sprite as a placeholder
 ### 5.0
 - Renamed to Lockstep; image on GitHub's registry (ghcr.io/smiei/lockstep)
 - 16 ROM hacks, Pokémon up to Gen 9 with regional forms
@@ -23,7 +27,7 @@
 - Boss-trainer pictures download by themselves
 Full notes: https://github.com/smiei/lockstep/releases
   </Changes>
-  <Date>2026-10-31</Date>
+  <Date>2026-11-01</Date>
   <License>MIT</License>
 
   <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Port of the web interface." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
