@@ -16,6 +16,14 @@
   <ExtraSearchTerms>nuzlocke soullink pokemon tracker infinite fusion romhack</ExtraSearchTerms>
   <Requires>Internet access on the first start: it downloads the Pokémon sprites, badges and trainer pictures (a few minutes). Installing the app on a phone needs HTTPS, for example through a reverse proxy.</Requires>
   <Changes>
+### 5.3
+- Official place names in all five languages for every official game
+- ROM hacks keep the English names of the game
+- Game covers in the game picker, on the start page and the Overview (new path: Game covers)
+### 5.2
+- 15 more official games, from Ruby and Sapphire to Scarlet and Violet
+- Catch calculator for Gen 6 to 9; Gen 5 formula corrected
+- Fairy types fixed for 18 Pokémon in games with Gen 6+ data
 ### 5.1
 - Encounter tab: frames and badges show each route's outcome at a glance
 - 66 more boss-trainer pictures for the ROM hacks
@@ -34,8 +42,10 @@ Full notes: https://github.com/smiei/lockstep/releases
   <Config Name="Database" Target="/app/db" Default="/mnt/user/appdata/lockstep" Mode="rw" Description="Your runs (SQLite database) and imported game packs. Back this folder up." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/lockstep</Config>
   <Config Name="Pokémon sprites" Target="/app/public/pokemon-sprites" Default="/mnt/user/appdata/lockstep/pokemon-sprites" Mode="rw" Description="Downloaded once and kept across updates. Without it, every image update downloads them again (a few minutes)." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/lockstep/pokemon-sprites</Config>
   <Config Name="Trainer pictures" Target="/app/public/trainers" Default="/mnt/user/appdata/lockstep/trainers" Mode="rw" Description="Boss-trainer pictures, downloaded once and kept across updates. Your own pictures go here too and are never overwritten." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/lockstep/trainers</Config>
+  <Config Name="Game covers" Target="/app/public/covers" Default="/mnt/user/appdata/lockstep/covers" Mode="rw" Description="Game covers, downloaded once and kept across updates. Your own covers (game id .png or .webp) go here too and are never overwritten." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/lockstep/covers</Config>
   <Config Name="Default colour" Target="DEFAULT_SHELL_COLOR" Default="green|red|blue|yellow" Description="The colour every device starts with, icons included. Each device can still pick its own in the gear menu." Type="Variable" Display="always" Required="false" Mask="false">green</Config>
   <Config Name="Default language" Target="DEFAULT_LANGUAGE" Default="" Description="The language a browser tab starts in: de, en, fr, es or it. Empty: each browser's own language. A language picked in the gear menu always wins." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Trainer picture download" Target="TRAINER_SPRITES" Default="on|off" Description="off skips downloading the boss-trainer pictures from Pokémon Showdown." Type="Variable" Display="advanced" Required="false" Mask="false">on</Config>
+  <Config Name="Cover download" Target="COVERS" Default="on|off" Description="off skips downloading the game covers." Type="Variable" Display="advanced" Required="false" Mask="false">on</Config>
   <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="file:/app/db/nuzlocke.db" Description="Where the database lives inside the container. Leave as is." Type="Variable" Display="advanced" Required="true" Mask="false">file:/app/db/nuzlocke.db</Config>
 </Container>
