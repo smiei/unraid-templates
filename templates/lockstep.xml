@@ -18,6 +18,7 @@
   <Changes>
 ### 5.4
 - Team tab: "Show team" lists the team in the Box, so one sort ranks every link
+- Mark runs as lost on the start page
 - The desktop side rail folds away; the level cap shows the team level ("24 / 22")
 - Fixes for the Encounter and Team tabs; HeartGold/SoulSilver route order
 - Installs without Docker need Node.js 20.19+
