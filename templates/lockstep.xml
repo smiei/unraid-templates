@@ -8,13 +8,13 @@
   <Privileged>false</Privileged>
   <Icon>https://raw.githubusercontent.com/smiei/unraid-templates/main/lockstep.png</Icon>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <Overview>Lockstep is a self-hosted tracker for Pokémon Nuzlocke runs, built around SoulLink: 2-4 players or solo. Log every catch route by route; a link forms once every player has caught, and one death takes the whole link to the Memorial. Level caps, a battle scout against each player's team, Species and Shiny Clause variants, and the type chart, stats, catch rates and move names of the generation you play. Gen 1-5, many ROM hacks (Radical Red, Unbound, Renegade Platinum, ...) and Pokémon Infinite Fusion with fusions. Live on every device at the table, installable as an app, in five languages. No account, no cloud. Pokémon sprites, badges and trainer pictures are downloaded on the first start, never shipped in the image. Unofficial, non-commercial fan project.</Overview>
+  <Overview>Lockstep is a self-hosted tracker for Pokémon Nuzlocke runs, built around SoulLink: 2-4 players or solo. Log every catch route by route; a link forms once every player has caught, and one death takes the whole link to the Memorial. Level caps, a battle scout against each player's team, Species and Shiny Clause variants, and the type chart, stats, catch rates and move names of the generation you play. Every main game from Gen 1 to 9 (Red/Blue to Scarlet/Violet), many ROM hacks (Radical Red, Unbound, Renegade Platinum, ...) and Pokémon Infinite Fusion with fusions. Live on every device at the table, installable as an app, in five languages. No account, no cloud. Pokémon sprites, badges, trainer pictures and game covers are downloaded on the first start, never shipped in the image. Unofficial, non-commercial fan project.</Overview>
   <Support>https://github.com/smiei/lockstep/issues</Support>
   <Project>https://github.com/smiei/lockstep</Project>
   <TemplateURL>https://raw.githubusercontent.com/smiei/unraid-templates/main/templates/lockstep.xml</TemplateURL>
   <Category>Tools:Utilities</Category>
   <ExtraSearchTerms>nuzlocke soullink pokemon tracker infinite fusion romhack</ExtraSearchTerms>
-  <Requires>Internet access on the first start: it downloads the Pokémon sprites, badges and trainer pictures (a few minutes). Installing the app on a phone needs HTTPS, for example through a reverse proxy.</Requires>
+  <Requires>Internet access on the first start: it downloads the Pokémon sprites, badges, trainer pictures and game covers (a few minutes). Installing the app on a phone needs HTTPS, for example through a reverse proxy.</Requires>
   <Changes>
 ### 5.4
 - Team tab: "Show team" lists the team in the Box, so one sort ranks every link
