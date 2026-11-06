@@ -16,6 +16,11 @@
   <ExtraSearchTerms>nuzlocke soullink pokemon tracker infinite fusion romhack</ExtraSearchTerms>
   <Requires>Internet access on the first start: it downloads the Pokémon sprites, badges, trainer pictures and game covers (a few minutes). Installing the app on a phone needs HTTPS, for example through a reverse proxy.</Requires>
   <Changes>
+### 5.6
+- HeartGold/SoulSilver: curated route order, Johto and Kanto sections, new rule "Include Kanto"
+- Randomizer evolution rules for every official Gen 1-7 game, checked against the randomizer
+- Radical Red, Unbound, Run &amp; Bun, Inclement Emerald: every ball up to Gen 8 and their own capture formula
+- Cherish Ball from Gen 4 on; the Fast Ball needs no checkbox
 ### 5.5
 - Start page: every player's team on the run cards, louder lost runs, Open only filter
 - Team tab: the Box sits below the team; Show team frames team members
